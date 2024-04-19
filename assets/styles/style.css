@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -35,11 +37,13 @@ header {
   margin-top: auto;
 }
 .header .truck {
+  margin-top: 5%;
+  margin-left: 5%;
   width: 127px;
   height: 77px;
-  background-color: aqua;
 }
 .header .logotype {
+  margin-left: 10%;
   font-size: 16px;
   color: white;
 }
@@ -47,20 +51,96 @@ header {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   height: 0;
-  width: 30px;
+  width: 40px;
 }
 .header img:not(figure) {
   width: 50px;
   height: 50px;
+  margin-right: 2%;
 }
 .header .location, .header .mail {
   background-color: aqua;
 }
 .header .second_part_header {
+  background-color: aqua;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .second_part_header ul {
+  list-style: none;
+}
+.header .second_part_header ul a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.header .second_part_header button {
+  background: rgb(252, 199, 14);
+  height: 56px;
+  width: 235px;
+  margin-right: 2%;
+  border-radius: 11px;
+}
+.header .second_part_header button a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.header .second_part_header button :hover {
+  color: #625f5f;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main .second_part {
+  background: rgba(39, 39, 39, 0.8);
+  color: white;
+}
+.main .second_part img:not(img > h3) {
+  width: 585px;
+  height: 307px;
+  gap: 0px;
+  opacity: 0px;
+  float: left;
+  background: #bc5f5f;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  height: 150px;
+  width: 49.5%;
+}
+.main .second_part img:not(img > h3):nth-child(2n) {
+  margin-right: 0;
+}
+.main .second_part h3 {
+  font-family: "Unbounded", sans-serif;
+  visibility: hidden;
+}
+.main .second_part p {
+  font-family: "Montserrat", sans-serif;
+}
+.main .second_part button {
+  width: 175px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgb(252, 199, 14);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.main .second_part button > a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background: rgb(0, 0, 0);
 }

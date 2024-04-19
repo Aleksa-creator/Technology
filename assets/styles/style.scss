@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
 
+
+@import "mixins";
+@import "variables";
 body{
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@ header{
 .header {
     .first_part_header{
         margin-top: 4%;
-        display: flex;
+        display: $display_flex;
         justify-content: space-between;
         background-color: greenyellow;
         height: 40%;
@@ -26,24 +27,27 @@ header{
         
     }
     .truck{
-       
+        margin-top: 5%;
+        margin-left: 5%;
         width: 127px;      
         height: 77px;
-        background-color: aqua;
+        
     }
     .logotype{
-        font-size: 16px;
+        margin-left: 10%;
+        font-size: $font_size_classic;
         color: white;
     }
     hr{
         transform: rotate(90deg);
         height: 0;
-        width: 30px;
+        width: 40px;
         
     }
     img:not(figure){
         width: 50px;
         height: 50px;
+        margin-right: 2%;
         
     }
     .location, .mail{
@@ -51,40 +55,75 @@ header{
         
     }
     .second_part_header{
+        background-color: aqua;
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        ul{
+            list-style: none;
+            
+
+            a{
+                text-decoration: none;
+                color: rgba(255, 255, 255, 1);
+                
+            }
+        }
+        button{
+            background: $button_color;
+            height: 56px;
+            width: 235px;
+            margin-right: 2%;
+            border-radius: 11px;
+
+            a{
+                text-decoration: none;
+                color: rgba(255, 255, 255, 1);
+            }
+            :hover{
+              color: #625f5f; 
+              transition: 0.5s ease; 
+            }
+        }
+
     }
 
 }
-.second_part{
-    background: rgba(39, 39, 39, 0.8);
-    color: white;
+.main{
+    .second_part{
+        background: rgba(39, 39, 39, 0.8);
+        color: white;
 
-    img{
-        width: 585px;
-        height: 307px;
-        gap: 0px;
-        opacity: 0px;
-
-    }
-    h3{
-        font-family: "Unbounded", sans-serif;
-    }
-    p{
-        font-family: "Montserrat", sans-serif;
-    }
-    button{
-        width: 175px;
-        height: 50px;
-        align-items: center;
-        background: rgba(252, 199, 14, 1);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        border-radius: 16px;
-    }
-    button>a{
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        background: rgba(0, 0, 0, 1);
+        img:not(img>h3){
+            width: 585px;
+            height: 307px;
+            gap: 0px;
+            opacity: 0px;
+            @include grid(2, 1%);
+        }
+        
+        h3{
+            font-family: $h3-fonts;
+            visibility: hidden;
+        }
+        p{
+            font-family: $paragraph_a-fonts;
+        }
+        button{
+            width: 175px;
+            height: 50px;
+            align-items: $center;
+            background: rgba(252, 199, 14, 1);
+            box-shadow: $button_box_shadow;
+            border-radius: 16px;
+        }
+        button>a{
+            font-family: $paragraph_a-fonts;
+            font-weight: 600;
+            font-size: 16px;
+            background: rgba(0, 0, 0, 1);
+        }
     }
 }
