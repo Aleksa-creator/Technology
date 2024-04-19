@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #272727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .first_part_header {
+  margin-top: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: greenyellow;
+  height: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header figure {
+  margin-left: auto;
+  margin-top: auto;
+}
+.header .truck {
+  width: 127px;
+  height: 77px;
+  background-color: aqua;
+}
+.header .logotype {
+  font-size: 16px;
+  color: white;
+}
+.header hr {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  height: 0;
+  width: 30px;
+}
+.header img:not(figure) {
+  width: 50px;
+  height: 50px;
+}
+.header .location, .header .mail {
+  background-color: aqua;
+}
+.header .second_part_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
