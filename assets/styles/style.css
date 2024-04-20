@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
 }
 
 header {
@@ -28,14 +29,13 @@ header {
 }
 
 .header .first_part_header {
-  margin-top: 4%;
+  margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: greenyellow;
   height: 40%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -67,8 +67,18 @@ header {
   height: 50px;
   margin-right: 2%;
 }
-.header .location, .header .mail {
-  background-color: aqua;
+.header .location,
+.header .mail {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.header .location {
+  font-size: 18px;
+}
+.header .mail {
+  font-size: 16px;
 }
 .header .second_part_header {
   display: -webkit-box;
@@ -113,6 +123,7 @@ header {
 }
 
 .main .first_part {
+  color: rgb(255, 255, 255);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,10 +131,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
 }
 .main .first_part > * {
   margin-bottom: 10px; /* Добавим немного отступа между элементами */
@@ -132,51 +139,104 @@ header {
   width: 50px; /* Уменьшим размер изображения */
   margin-right: auto; /* Разместим изображение справа */
 }
+.main .first_part > .truck {
+  width: 150px;
+  margin-left: auto;
+  margin-right: 0;
+}
 .main .yellow {
   margin-top: 20px;
   -ms-flex-item-align: end;
       align-self: flex-end; /* Разместим кнопку внизу справа */
 }
 .main .second_part {
-  background: rgba(39, 39, 39, 0.8);
-  color: white;
+  color: rgb(255, 255, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.main .second_part img:not(img > h3) {
-  width: 585px;
-  height: 307px;
-  gap: 0px;
-  opacity: 0px;
-  float: left;
-  background: #bc5f5f;
-  margin-right: 1%;
-  margin-bottom: 1%;
-  height: 150px;
-  width: 49.5%;
+.main .second_part > h3 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 10px;
 }
-.main .second_part img:not(img > h3):nth-child(2n) {
-  margin-right: 0;
+.main .second_part > img {
+  width: 200px; /* Размер картинки */
 }
-.main .second_part h3 {
+.main .yellow {
+  margin-top: 10px;
+}
+.main .fourth_part {
+  font-weight: 400;
+}
+.main .fourth_part h1 {
+  margin-left: 200px;
   font-family: "Unbounded", sans-serif;
-  visibility: hidden;
 }
-.main .second_part p {
+.main .fourth_part h3, .main .fourth_part h4 {
+  color: rgb(252, 199, 14);
+  font-family: "Unbounded", sans-serif;
+}
+.main .fourth_part h3,
+.main .fourth_part p {
+  margin-left: 200px;
+  margin-bottom: -15px;
+}
+.main .fourth_part h3 {
+  margin-bottom: -40px;
+}
+.main .fourth_part h4,
+.main .fourth_part h5 {
+  text-align: right;
+  margin-right: 200px;
+}
+.main .fourth_part h4 {
+  margin-bottom: 5px;
+}
+.main .fourth_part h5 {
+  margin-top: 0;
+}
+.main .fourth_part h5, .main .fourth_part p {
   font-family: "Montserrat", sans-serif;
 }
-.main .second_part button {
-  width: 175px;
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgb(252, 199, 14);
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+.main .fourth_part hr {
+  width: calc(86% - 200px);
+  margin: 5px 200px;
+  border: 1px solid rgba(252, 199, 14, 0.6);
 }
-.main .second_part button > a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+.main .fifth_part h1 {
+  margin-top: 50px;
+  margin-left: 200px;
+  font-weight: 400;
+  font-size: 40px;
+  font-family: "Unbounded", sans-serif;
+}
+.main .fifth_part img {
+  float: left;
+  margin-right: 20px;
+  margin-left: 500px;
+  margin-bottom: -40px;
+}
+.main .fifth_part h2,
+.main .fifth_part p {
+  text-align: center;
+  clear: both;
   font-size: 16px;
-  background: rgb(0, 0, 0);
+}
+.main .fifth_part p {
+  margin-left: 608px;
+  width: 500px;
+}
+.main .fifth_part h2:not(p) {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Unbounded", sans-serif;
 }

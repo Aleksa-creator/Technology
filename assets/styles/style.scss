@@ -6,6 +6,7 @@ body{
     margin: 0;
     padding: 0;
     background: rgba(39, 39, 39, 1);
+    color: rgb(255,255,255);
 
 }
 header{
@@ -19,17 +20,16 @@ header{
 }
 .header {
     .first_part_header{
-        margin-top: 4%;
+        margin-top: 2%;
         display: $display_flex;
         justify-content: space-between;
-        background-color: greenyellow;
+      
         height: 40%;
         align-items: center;
     }
     figure{
         margin-left: auto;
         margin-top: auto;
-        
     }
     .truck{
         margin-top: 5%;
@@ -55,9 +55,20 @@ header{
         margin-right: 2%;
         
     }
-    .location, .mail{
-        background-color: aqua;
-        
+    .location,
+    .mail {
+        display: block; // Устанавливаем отображение в виде блока
+        margin-bottom: 10px; // Добавляем немного отступа снизу между элементами
+        text-decoration: none; // Убираем подчеркивание ссылок
+        color: rgb(255,255,255); // Устанавливаем цвет текста
+    }
+
+    .location {
+        font-size: 18px; // Устанавливаем размер шрифта для местоположения
+    }
+
+    .mail {
+        font-size: 16px; // Устанавливаем размер шрифта для электронной почты
     }
     .second_part_header {
         display: flex;
@@ -101,10 +112,11 @@ header{
 }
 .main{
     .first_part {
+        color: rgb(255,255,255);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        // align-items: center;
+        // text-align: center;
       }
       
       .first_part > * {
@@ -114,6 +126,11 @@ header{
       .first_part > img {
         width: 50px; /* Уменьшим размер изображения */
         margin-right: auto; /* Разместим изображение справа */
+      }
+      .first_part>.truck{
+        width: 150px;
+        margin-left: auto;
+        margin-right: 0;
       }
       
       .yellow {
@@ -126,38 +143,126 @@ header{
 
 
 
-    .second_part{
-        background: rgba(39, 39, 39, 0.8);
-        color: white;
+      .second_part {
+        color: rgb(255,255,255);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+      
+      .second_part > h3 {
+        color: rgb(255,255,255);
+        text-align: center;
+        margin-top: 10px;
+      }
+      
+      .second_part > img {
+        width: 200px; /* Размер картинки */
+      }
+      
+      .yellow {
+        margin-top: 10px;
+      }
 
-        img:not(img>h3){
-            width: 585px;
-            height: 307px;
-            gap: 0px;
-            opacity: 0px;
-            @include grid(2, 1%);
+
+
+
+
+
+
+
+
+
+
+
+      .fourth_part {
+        font-weight: 400;
+        h1 {
+          margin-left: 200px;
+          font-family: $h3-fonts;
+          
+ 
+        }
+        h3, h4{
+            color: rgba(252, 199, 14, 1);
+            font-family: $h3-fonts;
+            
         }
         
-        h3{
-            font-family: $h3-fonts;
-            visibility: hidden;
+      
+        h3,
+        p {
+          margin-left: 200px;
+          margin-bottom: -15px; // расположение с левого края для тегов h3 и p
+        }
+        h3 {
+            margin-bottom: -40px; 
+            
+        }
+      
+        h4,
+        h5 {
+          text-align: right;
+          margin-right: 200px; // выравнивание по правому краю для заголовков h4 и h5
+        }
+        h4{
+            margin-bottom: 5px;
+        }
+      
+        h5 {
+          margin-top: 0; // убираем верхний отступ у заголовка h5
+        }
+        h5, p{
+            font-family: $paragraph_a-fonts;
+            
+        }
+      
+        hr {
+          width: calc(86% - 200px); // растягиваем горизонтальную линию по всей ширине, за вычетом отступа слева
+          margin: 5px 200px;
+          border: 1px solid rgba(252, 199, 14, 0.6) // добавляем немного отступа сверху и снизу от линии
+        }
+      }
+
+
+      .fifth_part {
+        h1 {
+            margin-top: 50px;
+            margin-left: 200px;
+            font-weight: 400;
+            font-size: 40px;
+            font-family: $h3-fonts; // расстояние от левого края для заголовка h1
+        }
+      
+        img {
+          float: left; // выравниваем картинки по левому краю
+          margin-right: 20px;
+          margin-left: 500px;
+          margin-bottom: -40px; // добавляем отступ справа от картинок
+        }
+      
+        h2,
+        p {
+          text-align: center; // выравниваем заголовки h2 и абзацы по центру
+          clear: both;
+          font-size: 16px; // очищаем обтекание для следующих за картинкой элементов
         }
         p{
-            font-family: $paragraph_a-fonts;
+            margin-left: 608px;
+            width: 500px;
         }
-        button{
-            width: 175px;
-            height: 50px;
-            align-items: $center;
-            background: rgba(252, 199, 14, 1);
-            box-shadow: $button_box_shadow;
-            border-radius: 16px;
+      
+        h2:not(p){
+            
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-family: $h3-fonts; // убираем верхний отступ у заголовка h2
         }
-        button>a{
-            font-family: $paragraph_a-fonts;
-            font-weight: 600;
-            font-size: 16px;
-            background: rgba(0, 0, 0, 1);
-        }
-    }
+      }
+      
+      
+      
+      
 }
