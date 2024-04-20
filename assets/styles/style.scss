@@ -25,64 +25,24 @@ header{
    @include yellow_btn;
 }
 .header {
-    .first_part_header{
-        width: 1200px;
-        margin-top: 2%;
-        display: $display_flex;
-        height: 40%;
-        align-items: center;
+    .first_part_header {
+        display: flex;
+        align-items: center; // Центрируем по вертикали
+        justify-content: space-between; // Равномерно распределяем элементы по горизонтали
     }
-    figure{
-        margin-left: 0;
-        margin-top: auto;
-        width: 120px;
-        background-color: aqua;
+    
+    .item {
+        display: flex;
+        align-items: center; // Центрируем по вертикали
     }
-    .truck{
-        margin-top: 5%;
-        margin-left: 0;
-        width: 127px;      
-        height: 77px;
-        
+    
+    .divider {
+        width: 1px; // Ширина прочерка
+        height: 30px; // Высота прочерка
+        margin: 0 20px; // Отступы для прочерка
+        transform: rotate(90deg); // Поворачиваем на 90 градусов
     }
-    .logotype{
-        margin-left: 10%;
-        font-size: $font_size_classic;
-        color: white;
-    }
-    hr{
-        transform: rotate(90deg);
-        height: 0;
-        width: 40px;
-        margin-left: 0;
-    }
-    img:not(figure){
-        width: 50px;
-        height: 50px;
-        background-color: aquamarine;
-    }
-    .WhatsApp{
-        padding-right: 40%;
-        width: 50px;
-    }
-    .Vkontakte{
-        margin-left: 10%;
-    }
-    .location,
-    .mail {
-        display: block; // Устанавливаем отображение в виде блока
-        margin-bottom: 10px; // Добавляем немного отступа снизу между элементами
-        text-decoration: none; // Убираем подчеркивание ссылок
-        color: rgb(255,255,255); // Устанавливаем цвет текста
-    }
-
-    .location {
-        font-size: 18px; // Устанавливаем размер шрифта для местоположения
-    }
-
-    .mail {
-        font-size: 16px; // Устанавливаем размер шрифта для электронной почты
-    }
+    
     .second_part_header {
         display: flex;
         justify-content: space-between;
@@ -541,4 +501,51 @@ header{
         color: rgba(255, 255, 255, 0.5);
         transition: 0.6s;
     }
+}
+footer{
+    .first_part_footer {
+        display: flex;
+        align-items: center; // Центрируем по вертикали
+        justify-content: space-between; // Равномерно распределяем элементы по горизонтали
+    }
+    
+    .item {
+        display: flex;
+        align-items: center; // Центрируем по вертикали
+    }
+    
+    .divider {
+        width: 1px; // Ширина прочерка
+        height: 30px; // Высота прочерка
+        margin: 0 20px; // Отступы для прочерка
+        transform: rotate(90deg); // Поворачиваем на 90 градусов
+    }
+    .second_part_footer{
+        
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Inter;
+        align-items: center;
+
+        .h3_one{
+            margin-left: 150px;
+            width: 300px;
+        }
+        
+        .h3_two{
+            float: inline-end;
+            margin-right: 150px;
+            border-bottom: 1px solid rgba(255,255,255, 0.7);
+            margin-top: -45px;
+
+            &:hover{
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.3);
+                transition: 0.5s;
+            }
+        }
+       
+    }
+    
 }
