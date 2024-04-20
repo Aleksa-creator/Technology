@@ -23,19 +23,20 @@
     <header>
         <div class="header">
             <div class="first_part_header">
-                <figure>
-                    <img class="truck" src="/assets/img/truck.svg" alt="Truck">    
-                    <figcaption class="logotype">ТЕХПОМОЩЬ</figcaption>
-                </figure>
-                <hr>
-                <img src="/assets/img/whatsapp.svg" alt="WhatsApp">
-                <img src="/assets/img/vk.svg" alt="Vkontakte">
                 
-                <a href="#" class="location">Москва, МО +300 км от МКАД</a>
-                <a href="mailto:road-helper@mail.ru" class="mail">road-helper@mail.ru</a>
-
-                <a href="tel:+79266695565" class="phone">+7(926)669-55-65</a>
+                <img class="truck" src="/assets/img/truck.svg" alt="Truck">    
+                <h1 class="logotype">ТЕХПОМОЩЬ</h1>
+                <hr>
+                <img class="WhatsApp" src="/assets/img/whatsapp.svg" alt="WhatsApp">
+                <img  class="Vkontakte" src="/assets/img/vk.svg" alt="Vkontakte">
+                <div class="loc">
+                    <a href="#" class="location">Москва, МО +300 км от МКАД</a>
+                    <a href="mailto:road-helper@mail.ru" class="mail">road-helper@mail.ru</a>
+                </div>
+                <div class="hours">
+                    <a href="tel:+79266695565" class="phone">+7(926)669-55-65</a>
                     <h5 class="daily">Работаем круглосуточно</h5>
+                </div>
             </div>
             <div class="second_part_header">
                 <ul>
@@ -44,7 +45,25 @@
                     <li><a href="#price">Цены</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
-                <button class="yellow"><a href="">Вызвать автомастера</a></button>
+                <button class="yellow" class="open-modal">Вызвать автомастера</button>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span
+                            class="close">&times;</span>
+                            <h2>ФОРМА ЗАЯВКИ</h2>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" name="text" id="name" placeholder="Ваше имя" required>
+                            <input type="text" name="email" id="email" placeholder="Ваш e-mail" required>
+                            <!-- <input type="text" name="field" id="field" placeholder="Ваше сообщение (марка автомобиля,)">  -->
+                        </div>
+                            <div class="modal-footer">
+                                <button type="submit">отправить</button>
+                            </div>
+                    </div>
+                </div>
 
             </div>
                     
@@ -56,26 +75,26 @@
         <div class="first_part">
             <h2>ТЕХПОМОЩЬ НА ДОРОГЕ</h2>
             <h4>ГРУЗОВЫМ АВТО, СПЕЦТЕХНИКЕ, ЛЕГКОВЫМ АВТОМОБИЛЯМ</h4>
-            <img src="/assets/img/point.svg" alt="Point is here">
-            <h6>Выезжаем в течение 10 минут после звонка</h6>
-            <img src="/assets/img/point.svg" alt="Point is here">
-            <h6>В 99% случаев экипаж устраняет проблему на месте</h6>
-            <button class="yellow"><a>Вызвать экипаж</a></button>
+            <img class="point_o" src="/assets/img/point.svg" alt="Point is here">
+            <h6 class="point_oh">Выезжаем в течение 10 минут после звонка</h6>
+            <img class="point_t" src="/assets/img/point.svg" alt="Point is here">
+            <h6 class="point_th">В 99% случаев экипаж устраняет проблему на месте</h6>
+            <button class="yellow">Вызвать экипаж</button>
             <img class="truck" src="/assets/img/trucks.svg" alt="Trucks">
         </div>
         <div class="second_part">
             <h2>Услуги</h2>
 
-            <img src="/assets/img/first.jpeg" alt="It is image"><h3>Диагностика автомобиля<p>Считывание, расшифровка и сброс ошибок, считывание контрольных параметров, рекомендации по устранению неисправностей<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/second.jpeg" alt="It is image"><h3>Запуск двигателя<p>Прикурить автомобиль от проводов, от бустера (пускозарядного устройства), для аккумуляторов 12В или 24В<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/third.jpeg" alt="It is image"><h3>Ремонт ходовой<p>Диагностика, ремонт и замена подвески, рулевого управления, тормозной системы и других элементов ходовой части автомобиля<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/fourth.png" alt="It is image"><h3>Ремонт двигателя<p>Замена поршней, замена или восстановление клапанов, восстановление цилиндров, ревизия системы охлаждения и смазки двигателя, замена коренных подшипников, втулок<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/fifth.jpeg" alt="It is image"><h3>Отключение сигнализации<p>Отключение автосигнализаций, иммобилайзера, меток любых марок профессионально и без повреждений<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/sixth.jpeg" alt="It is image"><h3>Вскрытие автомобиля<p>Профессиональное и аккуратное вскрытие автомобильных замков, открывание дверей автомобиля, аварийное открытие капота с использованием современных методик<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/seventh.jpeg" alt="It is image"><h3>Выезд автоэлектрика<p>Ремонт стартеров, генераторов, систем охлаждения, отопления, вентиляции двигателя, ремонт электропроводки<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/eight.jpeg" alt="It is image"><h3>Замена и подкачка колес<p>Замена колеса на запасное, подкачка шин, снятие секреток<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/nine.jpeg" alt="It is image"><h3>Доставка топлива<p>Экстренная доставка топлива в дороге (бензин/дизель, 5/10 литров, слив топлива)<button class="yellow"><a>Позвонить</a></button></p></h3>
-            <img src="/assets/img/ten.jpeg" alt="It is image"><h3>Буксировка до 10 км<p><button class="yellow">Перевозка неработающего или поврежденного автомобиля от места поломки до автосервиса или другого указанного места<a>Позвонить</a></button></p></h3>
+            <div class="first"><img src="/assets/img/first.jpeg" alt="It is image"><h3>Диагностика автомобиля<p>Считывание, расшифровка и сброс ошибок, считывание контрольных параметров, рекомендации по устранению неисправностей<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="second"><img src="/assets/img/second.jpeg" alt="It is image"><h3>Запуск двигателя<p>Прикурить автомобиль от проводов, от бустера (пускозарядного устройства), для аккумуляторов 12В или 24В<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="third"><img src="/assets/img/third.jpeg" alt="It is image"><h3>Ремонт ходовой<p>Диагностика, ремонт и замена подвески, рулевого управления, тормозной системы и других элементов ходовой части автомобиля<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="fourth"><img src="/assets/img/fourth.png" alt="It is image"><h3>Ремонт двигателя<p>Замена поршней, замена или восстановление клапанов, восстановление цилиндров, ревизия системы охлаждения и смазки двигателя, замена коренных подшипников, втулок<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="fifth"><img src="/assets/img/fifth.jpeg" alt="It is image"><h3>Отключение сигнализации<p>Отключение автосигнализаций, иммобилайзера, меток любых марок профессионально и без повреждений<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="sixth"><img src="/assets/img/sixth.jpeg" alt="It is image"><h3>Вскрытие автомобиля<p>Профессиональное и аккуратное вскрытие автомобильных замков, открывание дверей автомобиля, аварийное открытие капота с использованием современных методик<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="seventh"><img src="/assets/img/seventh.jpeg" alt="It is image"><h3>Выезд автоэлектрика<p>Ремонт стартеров, генераторов, систем охлаждения, отопления, вентиляции двигателя, ремонт электропроводки<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="eight"><img src="/assets/img/eight.jpeg" alt="It is image"><h3>Замена и подкачка колес<p>Замена колеса на запасное, подкачка шин, снятие секреток<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="nine"><img src="/assets/img/nine.jpeg" alt="It is image"><h3>Доставка топлива<p>Экстренная доставка топлива в дороге (бензин/дизель, 5/10 литров, слив топлива)<button class="yellow"><a>Позвонить</a></button></p></h3></div>
+            <div class="ten"><img src="/assets/img/ten.jpeg" alt="It is image"><h3>Буксировка до 10 км<p><button class="yellow">Перевозка неработающего или поврежденного автомобиля от места поломки до автосервиса или другого указанного места<a>Позвонить</a></button></p></h3></div>
         </div>
         <div class="third_part">
             <h1>Наши преимущества</h1>

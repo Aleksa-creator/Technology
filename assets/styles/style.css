@@ -36,25 +36,25 @@ header {
 }
 
 .header .first_part_header {
+  width: 1200px;
   margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 40%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .header figure {
-  margin-left: auto;
+  margin-left: 0;
   margin-top: auto;
+  width: 120px;
+  background-color: aqua;
 }
 .header .truck {
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: 0;
   width: 127px;
   height: 77px;
 }
@@ -68,11 +68,19 @@ header {
           transform: rotate(90deg);
   height: 0;
   width: 40px;
+  margin-left: 0;
 }
 .header img:not(figure) {
   width: 50px;
   height: 50px;
-  margin-right: 2%;
+  background-color: aquamarine;
+}
+.header .WhatsApp {
+  padding-right: 40%;
+  width: 50px;
+}
+.header .Vkontakte {
+  margin-left: 10%;
 }
 .header .location,
 .header .mail {
@@ -117,19 +125,122 @@ header {
   margin: 0 80px;
 }
 .header .second_part_header ul a {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 .header .second_part_header button.yellow {
   margin: 0 10px;
+  color: rgb(0, 0, 0);
 }
 .header .second_part_header button.yellow a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+.header .second_part_header button {
+  width: 200px;
+  height: 35px;
+}
+.header .second_part_header button:hover {
+  color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.header .second_part_header .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header .second_part_header .modal-content {
+  position: relative;
+  background-color: #E1BEE7;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.header .second_part_header .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.header .second_part_header .close:hover,
+.header .second_part_header .close:focus {
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.header .second_part_header .modal-header, .header .second_part_header .modal-footer {
+  padding: 2px 16px;
+  color: white;
+}
+.header .second_part_header .modal-body {
+  padding: 2px 16px;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.header .second_part_header .modal_body input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 .main .first_part {
+  background: rgba(79, 76, 76, 0.8);
+  font-family: "Unbounded", sans-serif;
   color: rgb(255, 255, 255);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,6 +249,19 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 500px;
+}
+.main .first_part h2 {
+  font-weight: 500;
+  font-size: 32px;
+  margin-left: 120px;
+}
+.main .first_part h4 {
+  font-weight: 300;
+  font-size: 24px;
+  width: 500px;
+  padding-bottom: 40px;
+  margin-left: 120px;
 }
 .main .first_part > * {
   margin-bottom: 10px; /* Добавим немного отступа между элементами */
@@ -146,17 +270,55 @@ header {
   width: 50px; /* Уменьшим размер изображения */
   margin-right: auto; /* Разместим изображение справа */
 }
+.main .point_o {
+  margin-left: 120px;
+}
+.main .point_oh {
+  margin-left: 190px;
+  margin-top: -50px;
+}
+.main .point_t {
+  margin-left: 530px;
+  margin-top: -50px;
+}
+.main .point_th {
+  margin-left: 600px;
+  margin-top: -48px;
+}
+.main h6 {
+  width: 250px;
+}
 .main .first_part > .truck {
-  width: 150px;
+  width: 600px;
   margin-left: auto;
   margin-right: 0;
 }
-.main .yellow {
-  margin-top: 20px;
-  -ms-flex-item-align: end;
-      align-self: flex-end; /* Разместим кнопку внизу справа */
+.main .first_part > .yellow {
+  background: rgb(252, 199, 14);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  width: 300px;
+  margin-top: 50px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 120px;
+  color: rgb(0, 0, 0);
+}
+.main .first_part button:hover {
+  color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.main .truck {
+  -ms-flex-item-align: self-end;
+      -ms-grid-row-align: self-end;
+      align-self: self-end;
+  margin-top: -350px;
+  clear: both;
 }
 .main .second_part {
+  margin-top: 50px;
   color: rgb(255, 255, 255);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +331,9 @@ header {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.main .second_part img {
+  width: 300px;
+}
 .main .second_part > h3 {
   color: rgb(255, 255, 255);
   text-align: center;
@@ -179,6 +344,27 @@ header {
 }
 .main .yellow {
   margin-top: 10px;
+}
+.main .third_part {
+  text-align: center;
+}
+.main .third_part .third_second_part {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.main .third_part .third_second_part img {
+  width: 100%;
+}
+.main .third_part .third_second_part h2, .main .third_part .third_second_part p {
+  margin: 0;
+}
+.main .third_part .third_second_part p {
+  margin-top: 5px;
 }
 .main .fourth_part {
   width: 1197px;
