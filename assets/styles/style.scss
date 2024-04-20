@@ -240,7 +240,7 @@ header{
       .fifth_part {
         font-weight: 400;
         
-        h1 {
+        .works{
             margin-top: 80px;
             margin-left: 200px;
             font-size: 40px;
@@ -274,7 +274,35 @@ header{
         }
       }
       .sixth_part{
-        
+        h1{
+            margin-left: 0;
+            font-size: 40px;
+            font-weight: 400;
+        }
+        margin-left: 200px; 
+        font-family: $h3-fonts;
+
+        h2{
+            font-weight: 400;
+            font-size: 40px;
+        }
+        .ne{
+            background: url(/assets/img/circle.svg);
+            
+        }
+        h4{
+            font-weight: 300;
+            font-size: 24px;
+            width: 600px;
+        }
+        h2, h4{
+            margin-left: 400px;
+        }
+        hr{
+            width: 100px;
+            margin-left: -120px;
+            margin-bottom: -26px;
+        }
       }
       
       

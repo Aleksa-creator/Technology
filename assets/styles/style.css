@@ -231,7 +231,7 @@ header {
 .main .fifth_part {
   font-weight: 400;
 }
-.main .fifth_part h1 {
+.main .fifth_part .works {
   margin-top: 80px;
   margin-left: 200px;
   font-size: 40px;
@@ -258,6 +258,35 @@ header {
   margin-bottom: 10px;
   font-weight: 400;
   font-family: "Unbounded", sans-serif;
+}
+.main .sixth_part {
+  margin-left: 200px;
+  font-family: "Unbounded", sans-serif;
+}
+.main .sixth_part h1 {
+  margin-left: 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+.main .sixth_part h2 {
+  font-weight: 400;
+  font-size: 40px;
+}
+.main .sixth_part .ne {
+  background: url(/assets/img/circle.svg);
+}
+.main .sixth_part h4 {
+  font-weight: 300;
+  font-size: 24px;
+  width: 600px;
+}
+.main .sixth_part h2, .main .sixth_part h4 {
+  margin-left: 400px;
+}
+.main .sixth_part hr {
+  width: 100px;
+  margin-left: -120px;
+  margin-bottom: -26px;
 }
 .main .final_modal {
   height: 448px;
