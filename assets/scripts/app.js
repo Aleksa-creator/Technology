@@ -1,3 +1,4 @@
+var modal = document.getElementById('myModal');
 var dialog = document.querySelector('dialog');
 var body = document.getElementsByTagName("body")[0];
 // выводим модальное окно

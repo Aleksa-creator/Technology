@@ -50,13 +50,14 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 169px;
+  gap: 0px;
 }
 .header .first_part_header .truck {
   width: 127px;
   height: 100px;
 }
 .header .first_part_header h1 {
+  width: 1200px;
   font-weight: 600;
   font-size: 16px;
   width: 107px;
@@ -92,19 +93,36 @@ header {
 .header .first_part_header .WhatsApp {
   margin-right: 10px;
 }
-.header .first_part_header .loc {
+.header .first_part_header .location {
   width: 250px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  line-height: 19.2px;
 }
 .header .first_part_header .hours {
   width: 180px;
 }
+.header .first_part_header .phone {
+  float: right;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36.57px;
+}
+.header .first_part_header .daily {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
 .header .second_part_header {
+  width: 1200px;
+  height: 88px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -135,20 +153,21 @@ header {
   font-family: "Unbounded", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 19.84px;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
-.header .second_part_header button.yellow {
-  margin: 0 10px;
-  color: rgb(0, 0, 0);
-}
-.header .second_part_header button.yellow a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
 .header .second_part_header button {
-  width: 200px;
-  height: 35px;
+  width: 305px;
+  height: 56px;
+  border-radius: 11px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
 }
 .header .second_part_header button:hover {
   color: rgba(0, 0, 0, 0.3);
@@ -193,10 +212,61 @@ header {
 .header .second_part_header .modalWindow {
   position: relative;
 }
+.header dialog {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(125, 125, 125);
+  border: none;
+  border-radius: 1rem;
+  color: rgb(255, 255, 255);
+}
+.header input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: transparent;
+  width: 722px;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 8px;
+}
+.header #close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -320px;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: -90px;
+  margin-bottom: 20px;
+  background: transparent;
+}
+.header #close:hover,
+.header #close:focus {
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.header #open {
+  background-color: rgb(252, 199, 14);
+  border-radius: 16px;
+}
 
 .main .first_part {
+  width: 1920px;
+  height: 810px;
   margin-top: 40px;
-  background: rgba(79, 76, 76, 0.8);
+  background: rgba(39, 39, 39, 0.8);
   font-family: "Unbounded", sans-serif;
   color: rgb(255, 255, 255);
   display: -webkit-box;
@@ -209,17 +279,41 @@ header {
   height: 500px;
 }
 .main .first_part button {
-  height: 100px;
+  width: 380px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgb(252, 199, 14);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .first_part h6 {
+  height: 40px;
+  width: 336px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19.84px;
+}
+.main .first_part .truck {
+  width: 1411px;
+  height: 809px;
+  -webkit-box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.5);
 }
 .main .first_part h2 {
+  height: 79px;
+  width: 1030px;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 64px;
+  line-height: 79.36px;
   margin-left: 120px;
 }
 .main .first_part h4 {
+  height: 120px;
+  width: 1136px;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 48px;
   width: 500px;
+  line-height: 59.52px;
   padding-bottom: 40px;
   margin-left: 120px;
 }
@@ -278,11 +372,14 @@ header {
   clear: both;
 }
 .main .prep {
+  width: 170px;
+  height: 50px;
   margin-left: 200px;
   font-family: "Unbounded", sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 400;
   text-align: left;
+  line-height: 49.6px;
 }
 .main .container {
   display: -webkit-box;
@@ -299,6 +396,8 @@ header {
   text-align: center;
 }
 .main .container .service {
+  width: 585px;
+  height: 543px;
   width: 45%;
   margin: 1%;
   max-width: 50%;
@@ -306,14 +405,24 @@ header {
 }
 .main .container .service img {
   margin-top: 5%;
-  width: 350px;
-  height: 250px;
+  width: 585px;
+  height: 308px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .container .service h3 {
+  width: 585px;
+  height: 30px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29.76px;
 }
 .main .container .service p {
+  width: 585px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  width: 350px;
+  font-size: 16px;
   margin-left: 150px;
 }
 .main .container .service button {

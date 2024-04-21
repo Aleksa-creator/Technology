@@ -33,7 +33,7 @@ header{
         display: flex;
         align-items: center; // Центрируем по вертикали
         justify-content: space-between; 
-        gap:169px;
+        gap:0px;
 
         .truck{
             width: 127px;
@@ -41,6 +41,7 @@ header{
         }
 
         h1{
+            width: 1200px;
             font-weight: 600;
             font-size: 16px;
             width: 107px;
@@ -73,19 +74,37 @@ header{
         .WhatsApp{
             margin-right: 10px;
         }
-        .loc{
+        .location{
             width: 250px;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $paragraph_a-fonts;
+            line-height: 19.2px;
         }
         .hours{
             width: 180px;
+        }
+        .phone{
+          float: right;
+          font-family: $paragraph_a-fonts;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 36.57px;
+        }
+        .daily{
+          font-family: $paragraph_a-fonts;
+          font-weight: 400;
+          font-size: 16px;
         }
     }
     
     
     
     .second_part_header {
+        width: 1200px;
+        height: 88px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         margin-top: 30px;
         background: rgba(0, 0, 0, 0.1);
@@ -108,24 +127,21 @@ header{
             font-family: $h3-fonts;
             font-weight: 400;
             font-size: 16px;
+            line-height: 19.84px;
             text-decoration: none;
             color: rgba(255,255,255,1); // Цвет текста ссылок
           }
         }
-      
-        button.yellow {
-          margin: 0 10px;
-          color: rgba(0,0,0,1); // Отступы между кнопкой и элементами списка
-
-          a{
-            text-decoration: none;
-            color: rgba(0,0,0,1);
-          }
-          
-        }
         button{
-            width: 200px;
-            height: 35px;
+            width: 305px;
+            height: 56px;
+            border-radius: 11px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-right: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: $paragraph_a-fonts;
         }
         button:hover{
             color: rgba(0, 0, 0, 0.3);
@@ -178,13 +194,58 @@ header{
           
           
       }
+      dialog {
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;		  
+        background: rgba(125, 125, 125, 1);
+        border: none;
+        border-radius: 1rem;
+        color: rgba(255,255,255,1);
+              
+      }
+      input{
+        display: flex;
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: transparent;
+        width: 722px;
+        border: 1px solid rgba(158, 158, 158, 1);
+        border-radius: 8px;    
+      }
+      #close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: -320px;
+        border: none;
+        align-items: center;
+        margin-right: -90px;
+        margin-bottom: 20px;
+        background: transparent;
+      }
+  
+          #close:hover,
+          #close:focus {
+              color: #000;
+              cursor: pointer;
+              transition: 0.6s;
+          }
+          #open{
+              background-color: rgba(252, 199, 14, 1);
+              border-radius: 16px;
+          }
       
 
 }
 .main{
     .first_part {
+        width: 1920px;
+        height: 810px;
         margin-top: 40px;
-        background: rgba(79, 76, 76, 0.8);
+        background: rgba(39, 39, 39, 0.8);
         font-family: $h3-fonts;
         color: rgb(255,255,255);
         display: flex;
@@ -192,19 +253,42 @@ header{
         height: 500px;
 
         button{
-            height: 100px;
+          width: 380px;
+          height: 56px;
+          border-radius: 16px;
+          background: rgba(252, 199, 14, 1);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        h6{
+          height: 40px;
+          width: 336px;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 19.84px;
+        }
+        .truck{
+          width: 1411px;
+          height: 809px;
+          box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.5);
         }
         
       }
       .first_part h2{
+
+        height: 79px;
+        width: 1030px;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 64px;
+        line-height: 79.36px;
         margin-left: 120px;
       }
       .first_part h4{
+        height: 120px;
+        width: 1136px;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 48px;
         width: 500px;
+        line-height: 59.52px;
         padding-bottom: 40px;
         margin-left: 120px;
       }
@@ -263,12 +347,14 @@ header{
       }
       
       .prep{
+        width: 170px;
+        height: 50px;
         margin-left: 200px;
         font-family: $h3-fonts;
-        font-size: 20px;
+        font-size: 40px;
         font-weight: 400;
         text-align: left;
-
+        line-height: 49.6px;
       }
 
 
@@ -283,49 +369,57 @@ header{
         
 
         .service{
-            width: 45%;
-            margin: 1%;
-            max-width: 50%;
-            max-height: 50%;
+          width: 585px;
+          height: 543px;
+          width: 45%;
+          margin: 1%;
+          max-width: 50%;
+          max-height: 50%;
 
-            img{
-                margin-top: 5%;
-                width: 350px;
-                height: 250px;
-                
+          img{
+              margin-top: 5%;
+              width: 585px;
+              height: 308px;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
              }
-            p{
-                font-weight: 400;
-                font-family: $paragraph_a-fonts;
-                font-size: 10px;
-                width: 350px;
-                margin-left: 150px;
+          h3{
+            width: 585px;
+            height: 30px;
+            font-family: $h3-fonts;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29.76px;
+          }
+          p{
+            width: 585px;
+            font-weight: 400;
+            font-family: $paragraph_a-fonts;
+            font-size: 16px;  
+            margin-left: 150px;
             }
-            button{
+          button{
                
-                float: left;
-                margin-top: 50px;
-                width: 100px;
-                height: 35px;
-                max-height: 35px;
-                align-items: center;
+              float: left;
+              margin-top: 50px;
+              width: 100px;
+              height: 35px;
+              max-height: 35px;
+              align-items: center;
                 
-                a{
-                    color: #000;
+              a{
+                color: #000;
 
-                    &:hover{
-                        cursor: pointer;
-                        color: rgba(0,0,0, 0.5);
-                        transform: 0.5s;
-                    }
+                &:hover{
+                  cursor: pointer;
+                  color: rgba(0,0,0, 0.5);
+                  transform: 0.5s;
                 }
             }
+          }
 
-            // h3{
-            //     align-items: center;
-            // }
-            }
+            
         }
+      }
 
 
 
