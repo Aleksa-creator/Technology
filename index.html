@@ -29,18 +29,17 @@
                 </div>
                 <hr class="divider">
                 <div class="item">
-                    <img class="WhatsApp" src="/assets/img/whatsapp.svg" alt="WhatsApp">
-                    <img class="Vkontakte" src="/assets/img/vk.svg" alt="Vkontakte">
+                    <a href="https://wa.me/79266695565"><img class="WhatsApp" src="/assets/img/whatsapp.svg"  alt="WhatsApp"></a>
+                    <a href="https://t.me/79266695565"><img class="Vkontakte" src="/assets/img/tg.svg" alt="Telegramm"></a>
                 </div>
-                <hr class="divider">
                 <div class="loc">
                     <a href="#" class="location">Москва, МО +300 км от МКАД</a>
                     <a href="mailto:road-helper@mail.ru" class="mail">road-helper@mail.ru</a>
                 </div>
-                <hr class="divider">
                 <div class="hours">
+                    <img src="/assets/img/call.svg" style="width: 15px; height: 15px;" alt="Call">
                     <a href="tel:+79266695565" class="phone">+7(926)669-55-65</a>
-                    <h5 class="daily">Работаем круглосуточно</h5>
+                    <a class="daily">Работаем круглосуточно</a>
                 </div>
             </div>
             
@@ -53,21 +52,12 @@
                 </ul>
                 <button class="yellow" class="open-modal">Вызвать автомастера</button>
 
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span
-                            class="close">&times;</span>
-                            <h2>ФОРМА ЗАЯВКИ</h2>
+                <div class="modalBackground">
+                    <div class="modalActive">
+                        <div class="modalClose">
+                            <img src="modalCross.svg" />
                         </div>
-                        <div class="modal-body">
-                            <input type="text" name="text" id="name" placeholder="Ваше имя" required>
-                            <input type="text" name="email" id="email" placeholder="Ваш e-mail" required>
-                            <!-- <input type="text" name="field" id="field" placeholder="Ваше сообщение (марка автомобиля,)">  -->
-                        </div>
-                            <div class="modal-footer">
-                                <button type="submit">отправить</button>
-                            </div>
+                        <div class="modalWindow"></div>
                     </div>
                 </div>
 
@@ -88,39 +78,42 @@
             <button class="yellow">Вызвать экипаж</button>
             <img class="truck" src="/assets/img/trucks.svg" alt="Trucks">
         </div>
-        <div class="second_part">
-            <h2>Услуги</h2>
+        <div class="prep"><h2>Услуги</h2></div>
+        <div class="container">
+            
 
-            <div class="first"><img src="/assets/img/first.jpeg" alt="It is image"><h3>Диагностика автомобиля<p>Считывание, расшифровка и сброс ошибок, считывание контрольных параметров, рекомендации по устранению неисправностей<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="second"><img src="/assets/img/second.jpeg" alt="It is image"><h3>Запуск двигателя<p>Прикурить автомобиль от проводов, от бустера (пускозарядного устройства), для аккумуляторов 12В или 24В<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="third"><img src="/assets/img/third.jpeg" alt="It is image"><h3>Ремонт ходовой<p>Диагностика, ремонт и замена подвески, рулевого управления, тормозной системы и других элементов ходовой части автомобиля<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="fourth"><img src="/assets/img/fourth.png" alt="It is image"><h3>Ремонт двигателя<p>Замена поршней, замена или восстановление клапанов, восстановление цилиндров, ревизия системы охлаждения и смазки двигателя, замена коренных подшипников, втулок<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="fifth"><img src="/assets/img/fifth.jpeg" alt="It is image"><h3>Отключение сигнализации<p>Отключение автосигнализаций, иммобилайзера, меток любых марок профессионально и без повреждений<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="sixth"><img src="/assets/img/sixth.jpeg" alt="It is image"><h3>Вскрытие автомобиля<p>Профессиональное и аккуратное вскрытие автомобильных замков, открывание дверей автомобиля, аварийное открытие капота с использованием современных методик<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="seventh"><img src="/assets/img/seventh.jpeg" alt="It is image"><h3>Выезд автоэлектрика<p>Ремонт стартеров, генераторов, систем охлаждения, отопления, вентиляции двигателя, ремонт электропроводки<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="eight"><img src="/assets/img/eight.jpeg" alt="It is image"><h3>Замена и подкачка колес<p>Замена колеса на запасное, подкачка шин, снятие секреток<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="nine"><img src="/assets/img/nine.jpeg" alt="It is image"><h3>Доставка топлива<p>Экстренная доставка топлива в дороге (бензин/дизель, 5/10 литров, слив топлива)<button class="yellow"><a>Позвонить</a></button></p></h3></div>
-            <div class="ten"><img src="/assets/img/ten.jpeg" alt="It is image"><h3>Буксировка до 10 км<p><button class="yellow">Перевозка неработающего или поврежденного автомобиля от места поломки до автосервиса или другого указанного места<a>Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/first.jpeg" alt="It is image"><h3>Диагностика автомобиля<p>Считывание, расшифровка и сброс ошибок, считывание контрольных параметров, рекомендации по устранению неисправностей<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/second.jpeg" alt="It is image"><h3>Запуск двигателя<p>Прикурить автомобиль от проводов, от бустера (пускозарядного устройства), для аккумуляторов 12В или 24В<button class="yellow" ><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/third.jpeg" alt="It is image"><h3>Ремонт ходовой<p>Диагностика, ремонт и замена подвески, рулевого управления, тормозной системы и других элементов ходовой части автомобиля<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/fourth.png" alt="It is image"><h3>Ремонт двигателя<p>Замена поршней, замена или восстановление клапанов, восстановление цилиндров, ревизия системы охлаждения и смазки двигателя, замена коренных подшипников, втулок<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/fifth.jpeg" alt="It is image"><h3>Отключение сигнализации<p>Отключение автосигнализаций, иммобилайзера, меток любых марок профессионально и без повреждений<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/sixth.jpeg" alt="It is image"><h3>Вскрытие автомобиля<p>Профессиональное и аккуратное вскрытие автомобильных замков, открывание дверей автомобиля, аварийное открытие капота с использованием современных методик<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/seventh.jpeg" alt="It is image"><h3>Выезд автоэлектрика<p>Ремонт стартеров, генераторов, систем охлаждения, отопления, вентиляции двигателя, ремонт электропроводки<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/eight.jpeg" alt="It is image"><h3>Замена и подкачка колес<p>Замена колеса на запасное, подкачка шин, снятие секреток<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/nine.jpeg" alt="It is image"><h3>Доставка топлива<p>Экстренная доставка топлива в дороге (бензин/дизель, 5/10 литров, слив топлива)<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
+            <div class="service"><img src="/assets/img/ten.jpeg" alt="It is image"><h3>Буксировка до 10 км<p>Перевозка неработающего или поврежденного автомобиля от места поломки до автосервиса или другого указанного места<button class="yellow"><a href="tel:+79266695565">Позвонить</a></button></p></h3></div>
         </div>
         <div class="third_part">
-            <h1>Наши преимущества</h1>
+            <div class="prem">Наши преимущества</div>
             <div class="third_second_part">
                 <img src="/assets/img/social_and_honest_prices.svg" alt="Social_and_Honest">
                 <h2>Демократичные и честные цены</h2>
                 <p>Доступные цены на любой кошелек, а также система скидок для постоянных клиентов</p>
-
+            </div>
+            <div class="third_second_part">
                 <img src="/assets/img/professionals.svg" alt="Profi">
                 <h2>Опытные специалисты</h2>
                 <p>Более 250 опытных специалистов, готовых устранить проблему в кратчайшие сроки</p>
-
+            </div>
+            <div class="third_second_part">
                 <img src="/assets/img/work_for_hours.svg" alt="Work_for_Hours">
                 <h2>Работаем круглосуточно</h2>
                 <p>Услуги предоставляем 24/7, обеспечивая поддержку в любое время дня и ночи</p>
-
+            </div>
+            <div class="third_second_part">
                 <img src="/assets/img/special_technic.svg" alt="Modern">
                 <h2>Современное оборудование</h2>
                 <p>Все инструменты привозим с собой, осуществляя помощь сразу и на месте</p>
-
             </div>
         </div>
         <div class="fourth_part">
@@ -163,19 +156,19 @@
             <h1 class="works">Как мы работаем</h1>
 
             <img src="/assets/img/one.svg" alt="One">
-            <h2>Оставьте заявку
-                <p>Оставьте заявку по номеру телефона или свяжитесь с нами в любом удобном мессенджере </p>
-            </h2>
+            <h2>Оставьте заявку</h2>
+            <p>Оставьте заявку по номеру телефона или свяжитесь с нами в любом удобном мессенджере </p>
+            
 
             <img src="/assets/img/two.svg" alt="Two">
-            <h2>Консультация
-                <p>Наши диспетчеры дадут рекомендации по Вашей проблеме и если она не решится по телефону, мы передадим запрос опытным специалистам</p>
-            </h2>
+            <h2>Консультация</h2>
+            <p>Наши диспетчеры дадут рекомендации по Вашей проблеме и если она не решится по телефону, мы передадим запрос опытным специалистам</p>
+            
 
             <img src="/assets/img/three.svg" alt="Three">
-            <h2>Выезд специалиста
-                <p>Наши специалисты оперативно выедут к месту вызова и окажут должную помощь</p>
-            </h2>
+            <h2>Выезд специалиста</h2>
+            <p>Наши специалисты оперативно выедут к месту вызова и окажут должную помощь</p>
+            
         </div>
 
         <div class="sixth_part">
@@ -204,12 +197,12 @@
                     <img class="WhatsApp" src="/assets/img/whatsapp.svg" alt="WhatsApp">
                     <img class="Vkontakte" src="/assets/img/vk.svg" alt="Vkontakte">
                 </div>
-                <hr class="divider">
+                
                 <div class="loc">
                     <a href="#" class="location">Москва, МО +300 км от МКАД</a>
                     <a href="mailto:road-helper@mail.ru" class="mail">road-helper@mail.ru</a>
                 </div>
-                <hr class="divider">
+                
                 <div class="hours">
                     <a href="tel:+79266695565" class="phone">+7(926)669-55-65</a>
                     <h5 class="daily">Работаем круглосуточно</h5>

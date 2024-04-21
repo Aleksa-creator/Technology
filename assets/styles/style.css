@@ -6,6 +6,7 @@ body {
   padding: 0;
   background: rgb(39, 39, 39);
   color: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
@@ -46,7 +47,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .item {
+.header .first_part_header .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,12 +55,21 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.header .divider {
-  width: 1px;
+.header .first_part_header .divider {
+  width: 0px;
   height: 30px;
-  margin: 0 20px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  margin: 0 0px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.header .first_part_header .WhatsApp {
+  margin-right: 10px;
+}
+.header .first_part_header .loc {
+  width: 250px;
+}
+.header .first_part_header .hours {
+  width: 180px;
 }
 .header .second_part_header {
   display: -webkit-box;
@@ -79,6 +89,10 @@ header {
           box-shadow: 0px 4px 60px 0px rgba(255, 255, 255, 0.1) inset;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  /* позиционирование самого модального окна */
+  /* кнопочка закрытия модального окна */
+  /* сама картинка кнопочки закрытия */
+  /* делаем позиционирование внутренних элементов относительно модального окна */
 }
 .header .second_part_header ul {
   display: -webkit-box;
@@ -114,97 +128,47 @@ header {
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-.header .second_part_header .modal {
+.header .second_part_header .modalBackground {
   display: none;
+  background: rgba(0, 0, 0, 0.8);
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.header .second_part_header .modal-content {
-  position: relative;
-  background-color: #E1BEE7;
-  margin: auto;
-  padding: 0;
-  width: 50%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-.header .second_part_header .close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.header .second_part_header .close:hover,
-.header .second_part_header .close:focus {
-  color: #000;
   cursor: pointer;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  /* указываем z-индекс для корректного наслаивания */
+  z-index: 1;
 }
-.header .second_part_header .modal-header, .header .second_part_header .modal-footer {
-  padding: 2px 16px;
-  color: white;
+.header .second_part_header .modalActive {
+  position: absolute;
+  width: 350px;
+  height: 495px;
+  top: calc(50% - 250px);
+  left: calc(50% - 175px);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  padding: 40px 20px;
 }
-.header .second_part_header .modal-body {
-  padding: 2px 16px;
-  height: 100px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 70%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.header .second_part_header .modalClose {
+  font-family: var(--font-regular);
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
-.header .second_part_header .modal_body input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header .second_part_header .modalClose img {
+  margin: 3px;
+  width: 24px;
+  height: 24px;
+}
+.header .second_part_header .modalWindow {
+  position: relative;
 }
 
 .main .first_part {
+  margin-top: 40px;
   background: rgba(79, 76, 76, 0.8);
   font-family: "Unbounded", sans-serif;
   color: rgb(255, 255, 255);
@@ -216,6 +180,9 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 500px;
+}
+.main .first_part button {
+  height: 100px;
 }
 .main .first_part h2 {
   font-weight: 500;
@@ -283,54 +250,104 @@ header {
   margin-top: -350px;
   clear: both;
 }
-.main .second_part {
-  margin-top: 50px;
-  color: rgb(255, 255, 255);
+.main .prep {
+  margin-left: 200px;
+  font-family: "Unbounded", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+.main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.main .second_part img {
-  width: 300px;
-}
-.main .second_part > h3 {
-  color: rgb(255, 255, 255);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  margin-top: 10px;
 }
-.main .second_part > img {
-  width: 200px; /* Размер картинки */
+.main .container .service {
+  width: 45%;
+  margin: 1%;
+  max-width: 50%;
+  max-height: 50%;
 }
-.main .yellow {
-  margin-top: 10px;
+.main .container .service img {
+  margin-top: 5%;
+  width: 350px;
+  height: 250px;
+}
+.main .container .service p {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  width: 350px;
+  margin-left: 150px;
+}
+.main .container .service button {
+  float: left;
+  margin-top: 50px;
+  width: 100px;
+  height: 35px;
+  max-height: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .container .service button a {
+  color: #000;
+}
+.main .container .service button a:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: 0.5s;
+          transform: 0.5s;
 }
 .main .third_part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+  margin-left: 100px;
+  height: 500px;
+  align-items: center;
+}
+.main .third_part .prem {
+  display: inline-block;
+  font-family: "Unbounded", sans-serif;
+  color: rgb(255, 255, 255);
+  margin-top: -20%;
+  margin-left: 100px;
 }
 .main .third_part .third_second_part {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  margin-left: -200px;
+  margin: 1%;
+  max-width: 200;
+  max-height: 10%;
 }
-.main .third_part .third_second_part img {
-  width: 100%;
-}
-.main .third_part .third_second_part h2, .main .third_part .third_second_part p {
-  margin: 0;
+.main .third_part .third_second_part h2 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 20px;
 }
 .main .third_part .third_second_part p {
-  margin-top: 5px;
+  font-size: 16px;
+}
+.main .third_part .third_second_part img {
+  width: 50px;
+  height: 50px;
 }
 .main .fourth_part {
   width: 1197px;
@@ -382,6 +399,7 @@ header {
 }
 .main .fifth_part {
   font-weight: 400;
+  margin-bottom: 100px;
 }
 .main .fifth_part .works {
   margin-top: 80px;
@@ -397,15 +415,18 @@ header {
 }
 .main .fifth_part h2,
 .main .fifth_part p {
-  text-align: center;
-  clear: both;
+  clear: left;
   font-size: 16px;
 }
 .main .fifth_part p {
   margin-left: 608px;
+  clear: both;
   width: 500px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
 }
-.main .fifth_part h2:not(p) {
+.main .fifth_part h2 {
+  margin-left: 610px;
   margin-top: 0px;
   margin-bottom: 10px;
   font-weight: 400;
@@ -450,13 +471,13 @@ header {
   border-radius: 16px;
   font-family: "Montserrat", sans-serif;
 }
-.main h1 {
+.main .final_modal h1 {
   padding-top: 30px;
   font-size: 14px;
   font-weight: 600;
   margin-left: 60px;
 }
-.main input {
+.main .final_modal input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,36 +489,37 @@ header {
   border: 1px solid rgb(158, 158, 158);
   border-radius: 8px;
 }
-.main input:nth-last-child(1) {
+.main .final_modal input:nth-last-child(1) {
   margin-bottom: 50px;
 }
-.main span:not(a > span, h2 > span) {
+.main .final_modal span:not(a > span, h2 > span) {
   color: rgb(168, 0, 0);
   margin: 5px;
 }
-.main .module {
+.main .final_modal .module {
   margin-left: 60px;
   width: 722px;
   height: 56px;
   font-weight: 600;
   font-size: 20px;
+  margin-bottom: 10px;
 }
-.main .module:hover {
+.main .final_modal .module:hover {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-.main .send {
+.main .final_modal .send {
   margin-left: 60px;
   padding-bottom: 50px;
   font-size: 10px;
 }
-.main .politic {
+.main .final_modal .politic {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 10px;
 }
-.main .politic:hover {
+.main .final_modal .politic:hover {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: 0.6s;
@@ -515,7 +537,7 @@ footer .first_part_footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .item {
+footer .first_part_footer .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,12 +545,12 @@ footer .item {
       -ms-flex-align: center;
           align-items: center;
 }
-footer .divider {
+footer .first_part_footer .divider {
   width: 1px;
   height: 30px;
   margin: 0 20px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 footer .second_part_footer {
   display: block;
