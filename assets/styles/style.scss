@@ -2,9 +2,14 @@
 
 @import "mixins";
 @import "variables";
+
+*{
+  padding: 0;
+  
+}
+
 body{
-    margin: 0;
-    padding: 0;
+   
     background: rgba(39, 39, 39, 1);
     color: rgb(255,255,255);
     overflow-x: hidden;
@@ -26,19 +31,21 @@ header{
    @include yellow_btn;
 }
 .header {
-    .first_part_header {
-        width: 1200px;
-        height: 100px;
-        border: 1px solid white;
+    .first_part_header {  
+          
+        height: 6.2em;
         display: flex;
         align-items: center; // Центрируем по вертикали
         justify-content: space-between; 
-        gap:0px;
+        box-sizing: border-box;
 
         .truck{
-            width: 127px;
-            height: 100px;
+          width: 7.9em;
+          height: 6.2em;
+          margin-right: 140px;
+            
         }
+        
 
         h1{
             width: 1200px;
@@ -46,52 +53,82 @@ header{
             font-size: 16px;
             width: 107px;
             height: 23px;
+            margin: 0 0 0 0;
+            margin-right: 140px;
         }
         .divider {
+            margin-left: -180px;
+            margin-right: -70px;
             width: 0px; // Ширина прочерка
             height: 74px; // Высота прочерка
-            margin: 0 0px; // Отступы для прочерка
+            // margin-right: 100px; // Отступы для прочерка
             transform: rotate(180deg); // Поворачиваем на 90 градусов
         }
         .icon{
+            margin: 0 0 0 0;
             width: 50px;
             height: 50px;
-            margin-right: 16px;
             gap: 8px;
         }
         .item {
             display: flex;
+            flex-direction: column;
             align-items: center; 
             justify-content: space-between;
-            width: 275px;
+            width: 270px;
             height: 100px;
-            background-color: aqua;
+            margin: 0 0 0 0;
             
-                     // Центрируем по вертикали
+            .moskva{
+              font-size: 16px;
+              width: 250px;
+              margin-left: 700px;
+            }       // Центрируем по вертикали
+        }
+        .social{
+          display: flex;
+          flex-direction: row;
+          width: 80px;
+        }
+        .cart{
+          margin-right: -520px;
+          margin-bottom: 30px;
+          width: 100px;
+          font-size: 16px;
+          line-height: 19.2px;
+          font-weight: 400;
         }
         
         
-        .WhatsApp{
-            margin-right: 10px;
+        .icon{
+          margin-left: 30px;          
         }
-        .location{
-            width: 250px;
-            font-size: 16px;
-            font-weight: 400;
-            font-family: $paragraph_a-fonts;
-            line-height: 19.2px;
+        
+        .daily{
+          width: 210px;
+          padding-bottom: 30px;
         }
-        .hours{
-            width: 180px;
+        .mail{
+          width: 250px;
+          margin-left: 700px;
+          margin-bottom: 20px;
+        }
+        .call{
+         
+          margin-left: 520px;
+          margin-top: 20px;
         }
         .phone{
+          width: 250px;
+          margin-top: 10px;
           float: right;
           font-family: $paragraph_a-fonts;
           font-weight: 600;
-          font-size: 30px;
+          font-size: 25px;
           line-height: 36.57px;
         }
         .daily{
+          margin: 0 0 0 0;
           font-family: $paragraph_a-fonts;
           font-weight: 400;
           font-size: 16px;
@@ -101,12 +138,12 @@ header{
     
     
     .second_part_header {
-        width: 1200px;
+        width: 1300px;
         height: 88px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 50px;
         background: rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: 16px;
@@ -242,15 +279,14 @@ header{
 }
 .main{
     .first_part {
-        width: 1920px;
         height: 810px;
         margin-top: 40px;
-        background: rgba(39, 39, 39, 0.8);
+        background: url(/assets/img/alpha_theme.jpeg);
         font-family: $h3-fonts;
         color: rgb(255,255,255);
         display: flex;
         flex-direction: column;
-        height: 500px;
+      
 
         button{
           width: 380px;
@@ -274,23 +310,26 @@ header{
         
       }
       .first_part h2{
-
+        margin-left: 1em;
+        margin-right: 0.8em;
         height: 79px;
-        width: 1030px;
+        width: 1300px;
         font-weight: 500;
         font-size: 64px;
         line-height: 79.36px;
-        margin-left: 120px;
+        margin-top: 50px;
+        margin-bottom: -30px;
       }
       .first_part h4{
+        margin-left: 1.3em;
+        margin-right: 1em;
         height: 120px;
         width: 1136px;
         font-weight: 300;
         font-size: 48px;
-        width: 500px;
+        
         line-height: 59.52px;
         padding-bottom: 40px;
-        margin-left: 120px;
       }
       
       
@@ -302,19 +341,19 @@ header{
         width: 50px; /* Уменьшим размер изображения */
         margin-right: auto; /* Разместим изображение справа */
       }
-      .point_o{
-        margin-left: 120px;
-      }
+      
       .point_oh{
-        margin-left: 190px;
+        margin-left: 10.3em;
+        margin-right: 1em;
+       
         margin-top: -50px;
       }
       .point_t{
-        margin-left: 530px;
+        
         margin-top: -50px;
       }
       .point_th{
-        margin-left: 600px;
+        
         margin-top: -48px;
       }
       h6{
@@ -331,7 +370,6 @@ header{
         width: 300px;
         margin-top: 50px;
         align-self: flex-start; 
-        margin-left: 120px;
         color: rgb(0,0,0,1);
         
       }
@@ -349,7 +387,6 @@ header{
       .prep{
         width: 170px;
         height: 50px;
-        margin-left: 200px;
         font-family: $h3-fonts;
         font-size: 40px;
         font-weight: 400;
@@ -375,6 +412,7 @@ header{
           margin: 1%;
           max-width: 50%;
           max-height: 50%;
+          text-align: center;
 
           img{
               margin-top: 5%;
@@ -492,12 +530,13 @@ header{
 
       .fourth_part {
         width: 1197px;
+       
         margin-left: 100px;
         font-weight: 400;
         margin-top: 100px;
 
         h1 {
-          margin-left: 120px;
+          margin-left: 20px;
           font-family: $h3-fonts;
           font-size: 40px;
           font-weight: 400;

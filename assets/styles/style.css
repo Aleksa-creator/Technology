@@ -2,9 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
-body {
-  margin: 0;
+* {
   padding: 0;
+}
+
+body {
   background: rgb(39, 39, 39);
   color: rgb(255, 255, 255);
   overflow-x: hidden;
@@ -38,9 +40,7 @@ header {
 }
 
 .header .first_part_header {
-  width: 1200px;
-  height: 100px;
-  border: 1px solid white;
+  height: 6.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,11 +50,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .header .first_part_header .truck {
-  width: 127px;
-  height: 100px;
+  width: 7.9em;
+  height: 6.2em;
+  margin-right: 140px;
 }
 .header .first_part_header h1 {
   width: 1200px;
@@ -62,61 +64,97 @@ header {
   font-size: 16px;
   width: 107px;
   height: 23px;
+  margin: 0 0 0 0;
+  margin-right: 140px;
 }
 .header .first_part_header .divider {
+  margin-left: -180px;
+  margin-right: -70px;
   width: 0px;
   height: 74px;
-  margin: 0 0px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .header .first_part_header .icon {
+  margin: 0 0 0 0;
   width: 50px;
   height: 50px;
-  margin-right: 16px;
   gap: 8px;
 }
 .header .first_part_header .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 275px;
+  width: 270px;
   height: 100px;
-  background-color: aqua;
+  margin: 0 0 0 0;
 }
-.header .first_part_header .WhatsApp {
-  margin-right: 10px;
-}
-.header .first_part_header .location {
-  width: 250px;
+.header .first_part_header .item .moskva {
   font-size: 16px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  line-height: 19.2px;
+  width: 250px;
+  margin-left: 700px;
 }
-.header .first_part_header .hours {
-  width: 180px;
+.header .first_part_header .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80px;
+}
+.header .first_part_header .cart {
+  margin-right: -520px;
+  margin-bottom: 30px;
+  width: 100px;
+  font-size: 16px;
+  line-height: 19.2px;
+  font-weight: 400;
+}
+.header .first_part_header .icon {
+  margin-left: 30px;
+}
+.header .first_part_header .daily {
+  width: 210px;
+  padding-bottom: 30px;
+}
+.header .first_part_header .mail {
+  width: 250px;
+  margin-left: 700px;
+  margin-bottom: 20px;
+}
+.header .first_part_header .call {
+  margin-left: 520px;
+  margin-top: 20px;
 }
 .header .first_part_header .phone {
+  width: 250px;
+  margin-top: 10px;
   float: right;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 36.57px;
 }
 .header .first_part_header .daily {
+  margin: 0 0 0 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 .header .second_part_header {
-  width: 1200px;
+  width: 1300px;
   height: 88px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,7 +164,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 16px;
@@ -263,10 +301,9 @@ header {
 }
 
 .main .first_part {
-  width: 1920px;
   height: 810px;
   margin-top: 40px;
-  background: rgba(39, 39, 39, 0.8);
+  background: url(/assets/img/alpha_theme.jpeg);
   font-family: "Unbounded", sans-serif;
   color: rgb(255, 255, 255);
   display: -webkit-box;
@@ -276,7 +313,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 500px;
 }
 .main .first_part button {
   width: 380px;
@@ -300,22 +336,25 @@ header {
           box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.5);
 }
 .main .first_part h2 {
+  margin-left: 1em;
+  margin-right: 0.8em;
   height: 79px;
-  width: 1030px;
+  width: 1300px;
   font-weight: 500;
   font-size: 64px;
   line-height: 79.36px;
-  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: -30px;
 }
 .main .first_part h4 {
+  margin-left: 1.3em;
+  margin-right: 1em;
   height: 120px;
   width: 1136px;
   font-weight: 300;
   font-size: 48px;
-  width: 500px;
   line-height: 59.52px;
   padding-bottom: 40px;
-  margin-left: 120px;
 }
 .main .first_part > * {
   margin-bottom: 10px; /* Добавим немного отступа между элементами */
@@ -324,19 +363,15 @@ header {
   width: 50px; /* Уменьшим размер изображения */
   margin-right: auto; /* Разместим изображение справа */
 }
-.main .point_o {
-  margin-left: 120px;
-}
 .main .point_oh {
-  margin-left: 190px;
+  margin-left: 10.3em;
+  margin-right: 1em;
   margin-top: -50px;
 }
 .main .point_t {
-  margin-left: 530px;
   margin-top: -50px;
 }
 .main .point_th {
-  margin-left: 600px;
   margin-top: -48px;
 }
 .main h6 {
@@ -356,7 +391,6 @@ header {
   margin-top: 50px;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-left: 120px;
   color: rgb(0, 0, 0);
 }
 .main .first_part button:hover {
@@ -374,7 +408,6 @@ header {
 .main .prep {
   width: 170px;
   height: 50px;
-  margin-left: 200px;
   font-family: "Unbounded", sans-serif;
   font-size: 40px;
   font-weight: 400;
@@ -402,6 +435,7 @@ header {
   margin: 1%;
   max-width: 50%;
   max-height: 50%;
+  text-align: center;
 }
 .main .container .service img {
   margin-top: 5%;
@@ -498,7 +532,7 @@ header {
   margin-top: 100px;
 }
 .main .fourth_part h1 {
-  margin-left: 120px;
+  margin-left: 20px;
   font-family: "Unbounded", sans-serif;
   font-size: 40px;
   font-weight: 400;
