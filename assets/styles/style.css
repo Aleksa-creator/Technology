@@ -7,9 +7,9 @@
 }
 
 body {
+  width: 100%;
   background: rgb(39, 39, 39);
   color: rgb(255, 255, 255);
-  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
@@ -59,7 +59,6 @@ header {
   margin-right: 140px;
 }
 .header .first_part_header h1 {
-  width: 1200px;
   font-weight: 600;
   font-size: 16px;
   width: 107px;
@@ -154,7 +153,7 @@ header {
   font-size: 16px;
 }
 .header .second_part_header {
-  width: 1300px;
+  width: 1250px;
   height: 88px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,10 +171,6 @@ header {
           box-shadow: 0px 4px 60px 0px rgba(255, 255, 255, 0.1) inset;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  /* позиционирование самого модального окна */
-  /* кнопочка закрытия модального окна */
-  /* сама картинка кнопочки закрытия */
-  /* делаем позиционирование внутренних элементов относительно модального окна */
 }
 .header .second_part_header ul {
   display: -webkit-box;
@@ -212,45 +207,8 @@ header {
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
-.header .second_part_header .modalBackground {
-  display: none;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  /* указываем z-индекс для корректного наслаивания */
-  z-index: 1;
-}
-.header .second_part_header .modalActive {
-  position: absolute;
-  width: 350px;
-  height: 495px;
-  top: calc(50% - 250px);
-  left: calc(50% - 175px);
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  cursor: default;
-  padding: 40px 20px;
-}
-.header .second_part_header .modalClose {
-  font-family: var(--font-regular);
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-.header .second_part_header .modalClose img {
-  margin: 3px;
-  width: 24px;
-  height: 24px;
-}
-.header .second_part_header .modalWindow {
-  position: relative;
-}
 .header dialog {
+  width: 850px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -262,7 +220,20 @@ header {
   border-radius: 1rem;
   color: rgb(255, 255, 255);
 }
+.header dialog h1 {
+  margin-left: 50px;
+}
+.header dialog .module_b {
+  background: rgb(252, 199, 14);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  margin-left: 50px;
+  width: 722px;
+  margin-bottom: 20px;
+}
 .header input {
+  width: 722px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,8 +241,6 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   background: transparent;
-  width: 722px;
-  border: 1px solid rgb(158, 158, 158);
   border-radius: 8px;
 }
 .header #close {
@@ -286,7 +255,7 @@ header {
           align-items: center;
   margin-right: -90px;
   margin-bottom: 20px;
-  background: transparent;
+  background: none;
 }
 .header #close:hover,
 .header #close:focus {
@@ -301,9 +270,9 @@ header {
 }
 
 .main .first_part {
-  height: 810px;
-  margin-top: 40px;
-  background: url(/assets/img/alpha_theme.jpeg);
+  height: 630px;
+  margin-top: 80px;
+  background: url(/assets/img/alpha.svg);
   font-family: "Unbounded", sans-serif;
   color: rgb(255, 255, 255);
   display: -webkit-box;
@@ -315,28 +284,28 @@ header {
           flex-direction: column;
 }
 .main .first_part button {
-  width: 380px;
-  height: 56px;
+  margin-left: 120px;
+  margin-top: 50px;
+  width: 280px;
   border-radius: 16px;
   background: rgb(252, 199, 14);
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 50px;
+}
+.main .first_part button:hover {
+  color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 .main .first_part h6 {
-  height: 40px;
-  width: 336px;
+  width: 296px;
   font-weight: 300;
   font-size: 16px;
   line-height: 19.84px;
 }
-.main .first_part .truck {
-  width: 1411px;
-  height: 809px;
-  -webkit-box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.5);
-}
 .main .first_part h2 {
-  margin-left: 1em;
+  margin-left: 1.9em;
   margin-right: 0.8em;
   height: 79px;
   width: 1300px;
@@ -347,7 +316,7 @@ header {
   margin-bottom: -30px;
 }
 .main .first_part h4 {
-  margin-left: 1.3em;
+  margin-left: 2.5em;
   margin-right: 1em;
   height: 120px;
   width: 1136px;
@@ -356,54 +325,41 @@ header {
   line-height: 59.52px;
   padding-bottom: 40px;
 }
+.main .first_part .truck {
+  width: 1411px;
+  height: 809px;
+  -ms-flex-item-align: self-end;
+      -ms-grid-row-align: self-end;
+      align-self: self-end;
+  margin-top: -340px;
+}
 .main .first_part > * {
   margin-bottom: 10px; /* Добавим немного отступа между элементами */
 }
 .main .first_part > img {
   width: 50px; /* Уменьшим размер изображения */
-  margin-right: auto; /* Разместим изображение справа */
+  /* Разместим изображение справа */
+}
+.main .point_o {
+  margin-left: 7.6em;
 }
 .main .point_oh {
-  margin-left: 10.3em;
+  margin-left: 12.3em;
   margin-right: 1em;
   margin-top: -50px;
 }
 .main .point_t {
-  margin-top: -50px;
+  margin-left: 34em;
+  margin-top: -57px;
 }
 .main .point_th {
-  margin-top: -48px;
-}
-.main h6 {
-  width: 250px;
+  margin-left: 39em;
+  margin-top: -53px;
 }
 .main .first_part > .truck {
   width: 600px;
   margin-left: auto;
   margin-right: 0;
-}
-.main .first_part > .yellow {
-  background: rgb(252, 199, 14);
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 11px;
-  width: 300px;
-  margin-top: 50px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  color: rgb(0, 0, 0);
-}
-.main .first_part button:hover {
-  color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-.main .truck {
-  -ms-flex-item-align: self-end;
-      -ms-grid-row-align: self-end;
-      align-self: self-end;
-  margin-top: -350px;
-  clear: both;
 }
 .main .prep {
   width: 170px;
@@ -413,8 +369,11 @@ header {
   font-weight: 400;
   text-align: left;
   line-height: 49.6px;
+  margin-left: 3em;
 }
 .main .container {
+  margin-left: 50px;
+  margin-right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,19 +382,11 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
 }
 .main .container .service {
   width: 585px;
   height: 543px;
   width: 45%;
-  margin: 1%;
-  max-width: 50%;
-  max-height: 50%;
-  text-align: center;
 }
 .main .container .service img {
   margin-top: 5%;
@@ -457,17 +408,12 @@ header {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  margin-left: 150px;
 }
 .main .container .service button {
-  float: left;
-  margin-top: 50px;
+  float: right;
   width: 100px;
   height: 35px;
   max-height: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .main .container .service button a {
   color: #000;
@@ -489,11 +435,12 @@ header {
   font-size: 16px;
 }
 .main .prem {
-  margin-left: 210px;
+  margin-left: 90px;
   margin-top: 50px;
-  font-size: 32px;
+  font-size: 40px;
   font-family: "Unbounded", sans-serif;
   font-weight: 400;
+  line-height: 49.6px;
 }
 .main .third_part {
   display: -webkit-box;
@@ -527,15 +474,14 @@ header {
 }
 .main .fourth_part {
   width: 1197px;
-  margin-left: 100px;
+  margin-left: 110px;
   font-weight: 400;
   margin-top: 100px;
 }
 .main .fourth_part h1 {
-  margin-left: 20px;
   font-family: "Unbounded", sans-serif;
   font-size: 40px;
-  font-weight: 400;
+  line-height: 49.6px;
 }
 .main .fourth_part h3, .main .fourth_part h4 {
   color: rgb(252, 199, 14);
@@ -544,7 +490,6 @@ header {
 }
 .main .fourth_part h3,
 .main .fourth_part p {
-  margin-left: 200px;
   margin-bottom: -30px;
 }
 .main .fourth_part h3 {
@@ -553,7 +498,6 @@ header {
 .main .fourth_part h4,
 .main .fourth_part h5 {
   text-align: right;
-  margin-right: 170px;
 }
 .main .fourth_part h4 {
   margin-bottom: 5px;
@@ -571,8 +515,8 @@ header {
   padding-bottom: 0px;
 }
 .main .fourth_part hr {
-  width: calc(86% - 200px);
-  margin: 5px 200px;
+  width: 100%;
+  margin: 5px 0px;
   border: 1px solid rgba(252, 199, 14, 0.6);
 }
 .main .fifth_part {
@@ -581,7 +525,7 @@ header {
 }
 .main .fifth_part .works {
   margin-top: 80px;
-  margin-left: 200px;
+  margin-left: 90px;
   font-size: 40px;
   font-family: "Unbounded", sans-serif;
 }
@@ -611,7 +555,7 @@ header {
   font-family: "Unbounded", sans-serif;
 }
 .main .sixth_part {
-  margin-left: 200px;
+  margin-left: 90px;
   font-family: "Unbounded", sans-serif;
 }
 .main .sixth_part h1 {
@@ -653,7 +597,7 @@ header {
   padding-top: 30px;
   font-size: 14px;
   font-weight: 600;
-  margin-left: 60px;
+  margin-left: 20px;
 }
 .main .final_modal input {
   display: -webkit-box;
@@ -693,6 +637,9 @@ header {
   padding-bottom: 50px;
   font-size: 10px;
 }
+.main .final_modal .send, .main .final_modal .politic {
+  margin-top: 50px;
+}
 .main .final_modal .politic {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 10px;
@@ -704,7 +651,21 @@ header {
   transition: 0.6s;
 }
 
-footer .first_part_footer {
+footer {
+  background-color: #272727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .first_part_footer {
+  height: 6.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -714,44 +675,105 @@ footer .first_part_footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-footer .first_part_footer .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.footer .first_part_footer .truck_f {
+  width: 7.9em;
+  height: 6.2em;
+  margin-right: 140px;
 }
-footer .first_part_footer .divider {
-  width: 1px;
-  height: 30px;
-  margin: 0 20px;
+.footer .first_part_footer h1 {
+  font-weight: 600;
+  font-size: 16px;
+  width: 107px;
+  height: 23px;
+  margin: 0 0 0 0;
+  margin-right: 140px;
+}
+.footer .first_part_footer .divider_f {
+  margin-left: -180px;
+  margin-right: -70px;
+  width: 0px;
+  height: 74px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-footer .second_part_footer {
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Inter;
+.footer .first_part_footer .icon_f {
+  margin: 0 0 0 0;
+  width: 50px;
+  height: 50px;
+  gap: 8px;
+}
+.footer .first_part_footer .item_f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 270px;
+  height: 100px;
+  margin: 0 0 0 0;
 }
-footer .second_part_footer .h3_one {
-  margin-left: 150px;
-  width: 300px;
+.footer .first_part_footer .item_f .moskva_f {
+  font-size: 16px;
+  width: 250px;
+  margin-left: 700px;
 }
-footer .second_part_footer .h3_two {
-  float: inline-end;
-  margin-right: 150px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  margin-top: -45px;
+.footer .first_part_footer .social_f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80px;
 }
-footer .second_part_footer .h3_two:hover {
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.footer .first_part_footer .cart_f {
+  margin-right: -520px;
+  margin-bottom: 30px;
+  width: 100px;
+  font-size: 16px;
+  line-height: 19.2px;
+  font-weight: 400;
+}
+.footer .first_part_footer .icon_f {
+  margin-left: 30px;
+}
+.footer .first_part_footer .daily_f {
+  width: 210px;
+  padding-bottom: 30px;
+}
+.footer .first_part_footer .mail_f {
+  width: 250px;
+  margin-left: 700px;
+  margin-bottom: 20px;
+}
+.footer .first_part_footer .call_f {
+  margin-left: 520px;
+  margin-top: 20px;
+}
+.footer .first_part_footer .phone_f {
+  width: 250px;
+  margin-top: 10px;
+  float: right;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 36.57px;
+}
+.footer .first_part_footer .daily_f {
+  margin: 0 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
